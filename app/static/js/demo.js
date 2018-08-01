@@ -27,9 +27,9 @@ const getPosts = () => {
     for (i = 0; i < data.length; i++) {
       console.log(data.length)
       document.getElementById('post-list').innerHTML += `<div>
-      <h4>${data[i].title}</h4>
+      <h4><i>${data[i].title}</i></h4>
       <p>${data[i].body}</p>
-      </div>`
+      </div><hr/>`
     }
   })
   .catch(error => {
