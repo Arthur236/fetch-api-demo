@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>{% block title %}{% endblock %}</title>
+
+    <!-- Favicons-->
+    <link rel="apple-touch-icon-precomposed" href="{{ url_for('static', filename='img/favicon.png') }}">
+    <link rel="icon" href="{{ url_for('static', filename='img/favicon.png') }}" sizes="32x32">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/materialize.css') }}" media="screen,projection" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/flickity.min.css') }}" media="screen" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/animate.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+
+<body>
+    <div class="container">
+      <h1>Posts Form</h1>
+
+      <form class="form">
+        <label>Title</label>
+        <input type="text" id="title" name="title" />
+
+        <label>Body</label>
+        <input type="text" id="body" name="body" />
+
+        <button class="waves-effect waves-light btn" onclick="addPost()">Add Post</button>
+      </form>
+
+      <hr/>
+      <button class="waves-effect waves-light btn" onclick="getPosts()">Get Posts</button>
+
+      <h2>Posts</h2>
+      <div id="post-list" class="posts">
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-3.2.1.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/materialize.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/flickity.pkgd.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/wow.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/custom.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/demo.js') }}"></script>
+
+</body>
+
+</html>
