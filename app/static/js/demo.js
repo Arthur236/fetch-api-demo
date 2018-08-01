@@ -6,7 +6,7 @@ const addPost = () => {
         body: document.getElementById('body').value
       }),
       headers: {
-        "Content-type": "application/json; charset=UTF-8"
+        'Content-type': 'application/json; charset=UTF-8'
       }
     })
     .then(response => response.json())
